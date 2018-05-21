@@ -27,8 +27,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        BathingSitesFragment bath = new BathingSitesFragment();
-        getSupportFragmentManager().beginTransaction().add(R.id.coordinator, bath).commit();
     }
 
     @Override

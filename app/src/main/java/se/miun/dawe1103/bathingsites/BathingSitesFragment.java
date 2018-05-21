@@ -1,7 +1,5 @@
 package se.miun.dawe1103.bathingsites;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -11,11 +9,6 @@ import android.view.ViewGroup;
 
 
 public class BathingSitesFragment extends Fragment {
-
-
-    public BathingSitesFragment() {
-        // Required empty public constructor
-    }
 
 
 
