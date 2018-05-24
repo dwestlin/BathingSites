@@ -19,7 +19,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".NewBathingSiteActivity"></activity>
+        <activity
+            android:name=".NewBathingSiteActivity"
+            android:theme = "@style/AppTheme.NoActionBar"
+            >
+
+        </activity>
     </application>
 
 </manifest>

@@ -1,5 +1,6 @@
 package se.miun.dawe1103.bathingsites;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -23,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getBaseContext(), NewBathingSiteActivity.class);
-                startActivity(i);
+                Intent myIntent = new Intent(getBaseContext(), NewBathingSiteActivity.class);
+                startActivity(myIntent);
             }
         });
 
@@ -51,4 +52,5 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }
