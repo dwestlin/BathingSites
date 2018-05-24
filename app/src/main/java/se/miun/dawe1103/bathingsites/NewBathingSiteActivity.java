@@ -2,6 +2,8 @@ package se.miun.dawe1103.bathingsites;
 
 
 import android.app.Fragment;
+import android.content.res.Configuration;
+import android.graphics.Bitmap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,6 +15,8 @@ import android.widget.EditText;
 
 public class NewBathingSiteActivity extends AppCompatActivity {
 
+    private NewBathingSiteFragment newBathingSiteFragment;
+    private BathingSitesFragment bathingSiteFragment;
 
     public NewBathingSiteActivity(){
 
@@ -26,10 +30,20 @@ public class NewBathingSiteActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbarNewBathingSite);
         setSupportActionBar(toolbar);
 
-        if(getSupportActionBar() != null){
-            getSupportActionBar().setTitle(R.string.new_bathing_site_toolbar_title);
+
+        int orientation = this.getResources().getConfiguration().orientation;
+
+        if(orientation == Configuration.ORIENTATION_PORTRAIT){
+            newBathingSiteFragment = new NewBathingSiteFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.bathingImgFragment,newBathingSiteFragment).commit();
         }
-        //toolbar.inflateMenu(R.menu.menu_new_bathing_site);
+        else if(orientation == Configuration.ORIENTATION_LANDSCAPE){
+            bathingSiteFragment = new BathingSitesFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.bathingImgFragment,bathingSiteFragment).commit();
+
+            newBathingSiteFragment = new NewBathingSiteFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.newBathingSiteInput, newBathingSiteFragment).commit();
+        }
     }
 
 
@@ -63,7 +77,8 @@ public class NewBathingSiteActivity extends AppCompatActivity {
 
 
     public void clearInput(){
-
+        newBathingSiteFragment.clearInput();
+        Log.d("CLEARINPUT: ", "clearInput");
     }
 
 }

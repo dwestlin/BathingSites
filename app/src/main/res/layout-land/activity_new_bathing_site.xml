@@ -16,6 +16,7 @@
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbarNewBathingSite"
                 android:layout_width="match_parent"
+                app:title="@string/new_bathing_site_toolbar_title"
                 android:layout_height="match_parent"
                 android:background="?attr/colorPrimary"
                 app:popupTheme="@style/AppTheme.PopupOverlay" />
@@ -28,19 +29,34 @@
         android:weightSum="3"
         android:baselineAligned="false">
 
-        <include layout="@layout/content_main"
+        <!--<include layout="@layout/content_main"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="start"
-            android:layout_weight="2"
-             />
+            android:layout_weight="2" />
 
        <include layout="@layout/content_new_bathing_site"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="end"
-             android:layout_weight="1"
-          />
+             android:layout_weight="1" />-->
+
+
+        <FrameLayout
+            android:id="@+id/bathingImgFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_weight="2"/>
+
+        <FrameLayout
+            android:id="@+id/newBathingSiteInput"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_weight="1"/>
+
+
     </LinearLayout>
 
 </LinearLayout>

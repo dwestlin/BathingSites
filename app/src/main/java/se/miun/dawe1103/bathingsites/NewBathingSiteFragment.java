@@ -4,6 +4,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,5 +43,17 @@ public class NewBathingSiteFragment extends Fragment {
 
 
         return v;
+    }
+
+
+    public void clearInput(){
+        bathing_name_input.setText("");
+        bathing_desc_input.setText("");
+        bathing_address_input.setText("");
+        bathing_latitude_input.setText("");
+        bathing_longitude_input.setText("");
+        date_water_edittext.setText("");
+        temp_water_edittext.setText("");
+        grade_rate.setRating(0F);
     }
 }
