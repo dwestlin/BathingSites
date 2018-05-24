@@ -1,30 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     tools:context=".NewBathingSiteFragment">
 
-    <TextView
-        android:id="@+id/bathing_name"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Name:" />
+        android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/bathing_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/new_bathing_site_name" />
+
+            <EditText
+                android:id="@+id/bathing_name_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="@string/please_input_name_here"/>
+
+            <TextView
+                android:id="@+id/bathing_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/new_bathing_site_desc" />
+
+            <EditText
+                android:id="@+id/bathing_desc_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="@string/please_input_description_here" />
+
+            <TextView
+                android:id="@+id/bathing_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/new_bathing_site_address" />
+
+            <EditText
+                android:id="@+id/bathing_address_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="@string/please_input_address_here"/>
+
+            <LinearLayout
+                android:id="@+id/position_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/bathing_longitude"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="@string/new_bathing_site_longitude"/>
 
 
-    <EditText
-        android:id="@+id/bathing_name_input"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/bathing_latitude"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="@string/new_bathing_site_latitude"/>
+            </LinearLayout>
 
-    <TextView
-        android:id="@+id/bathing_desc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Name:" />
+            <LinearLayout
+                android:id="@+id/position_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/bathing_desc_input"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-</FrameLayout>
+                <EditText
+                    android:id="@+id/bathing_latitude_input"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_weight="1"
+                    android:inputType="numberDecimal"/>
+
+                <EditText
+                    android:id="@+id/bathing_longitude_input"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_weight="1"
+                    android:inputType="numberDecimal"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/bathing_grade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/new_bathing_site_grade" />
+
+            <RatingBar
+                android:id="@+id/grade_rate"
+                style="?android:attr/ratingBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:stepSize="0.1"
+               />
+
+
+            <LinearLayout
+                android:id="@+id/temperature_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/water_temp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_weight="1"
+                    android:text="@string/new_bathing_site_water_temp" />
+
+                <TextView
+                    android:id="@+id/date_temp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_weight="1"
+                    android:text="@string/new_bathing_site_date_for_temp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/temperature_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/temp_water_edittext"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_weight="1"
+                    android:inputType="numberDecimal"/>
+
+                <EditText
+                    android:id="@+id/date_water_edittext"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_weight="1"
+                    android:inputType="numberDecimal"/>
+
+            </LinearLayout>
+        </LinearLayout>
+</ScrollView>
