@@ -1,9 +1,9 @@
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     tools:context="se.miun.dawe1103.bathingsites.NewBathingSiteActivity">
 
     <android.support.design.widget.AppBarLayout
@@ -19,11 +19,10 @@
             app:popupTheme="@style/AppTheme.PopupOverlay" />
     </android.support.design.widget.AppBarLayout>
 
-
     <FrameLayout
         android:id="@+id/bathingImgFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-</android.support.design.widget.CoordinatorLayout>
+</LinearLayout>
 

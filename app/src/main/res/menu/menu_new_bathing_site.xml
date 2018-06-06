@@ -6,11 +6,11 @@
         android:id="@+id/action_clear"
         android:orderInCategory="100"
         android:title="@string/menu_action_clear"
-        app:showAsAction="always" />
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/action_save"
         android:orderInCategory="100"
         android:title="@string/menu_action_save"
-        app:showAsAction="always" />
+        app:showAsAction="ifRoom" />
 </menu>
