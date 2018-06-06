@@ -2,22 +2,27 @@
     <string name="app_name">Bathing Sites</string>
     <string name="action_settings">Settings</string>
 
-
     <string name="new_bathing_site_name">Name:</string>
     <string name="new_bathing_site_desc">Description:</string>
     <string name="new_bathing_site_address">Address:</string>
     <string name="new_bathing_site_longitude">Longitude:</string>
     <string name="new_bathing_site_latitude">Latitude:</string>
-    <string name="new_bathing_site_grade">Grade</string>
+    <string name="new_bathing_site_grade">Grade:</string>
     <string name="new_bathing_site_water_temp">Water temp:</string>
     <string name="new_bathing_site_date_for_temp">Date for temp:</string>
 
     <string name="please_input_name_here">Please input name here</string>
     <string name="please_input_description_here">Please input description here</string>
     <string name="please_input_address_here">Please input address here</string>
+    <string name="enter_latitude">Enter Latitude</string>
+    <string name="enter_longitude">Enter Longitude</string>
+    <string name="enter_temperature">Enter temperature</string>
+    <string name="enter_date">Enter date</string>
 
+    <string name="new_bathing_site_toolbar_title">New Bathing Site</string>
     <string name="menu_action_clear">Clear</string>
     <string name="menu_action_save">Save</string>
-    <string name="new_bathing_site_toolbar_title">New Bathing Site</string>
-
+    <string name="bathing_site">Bathing Sites</string>
+    <string name="action_weather">Weather</string>
+    <string name="image_of_bathing_sites">Image of bathing sites</string>
 </resources>

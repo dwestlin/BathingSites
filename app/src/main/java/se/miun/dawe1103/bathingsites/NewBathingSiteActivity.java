@@ -1,20 +1,18 @@
 package se.miun.dawe1103.bathingsites;
 
 
-import android.app.Fragment;
 import android.content.res.Configuration;
-import android.graphics.Bitmap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v7.widget.Toolbar;
-import android.widget.EditText;
+
 
 
 public class NewBathingSiteActivity extends AppCompatActivity {
 
+    // Defining classes.
     private NewBathingSiteFragment newBathingSiteFragment;
     private BathingSitesFragment bathingSiteFragment;
 
@@ -30,9 +28,10 @@ public class NewBathingSiteActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbarNewBathingSite);
         setSupportActionBar(toolbar);
 
-
+        // get the orientation
         int orientation = this.getResources().getConfiguration().orientation;
 
+        // And based on what orientation the app has, the fragments are created
         if(orientation == Configuration.ORIENTATION_PORTRAIT){
             newBathingSiteFragment = new NewBathingSiteFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.bathingImgFragment,newBathingSiteFragment).commit();
@@ -64,11 +63,10 @@ public class NewBathingSiteActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_clear) {
             clearInput();
-            Log.d("CLEAR:", "CLEAR-button has been pressed");
             return true;
         }
         else if (id == R.id.action_save) {
-            Log.d("SAVE:", "SAVE-button has been pressed");
+            saveBathingSite();
             return true;
         }
 
@@ -76,9 +74,14 @@ public class NewBathingSiteActivity extends AppCompatActivity {
     }
 
 
+    // Function that's calls the fragments clearInput()-function.
     public void clearInput(){
         newBathingSiteFragment.clearInput();
-        Log.d("CLEARINPUT: ", "clearInput");
+    }
+
+    // Function that calls the fragments saveBathingSite()-function.
+    public void saveBathingSite(){
+        newBathingSiteFragment.saveBathingSite();
     }
 
 }

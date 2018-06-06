@@ -84,6 +84,7 @@
 
                 <EditText
                     android:id="@+id/bathing_latitude_input"
+                    android:hint="@string/enter_latitude"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
@@ -92,6 +93,7 @@
 
                 <EditText
                     android:id="@+id/bathing_longitude_input"
+                    android:hint="@string/enter_longitude"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
@@ -111,7 +113,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:numStars="5"
-                android:stepSize="0.1"
+                android:stepSize="1.0"
                />
 
 
@@ -146,6 +148,7 @@
 
                 <EditText
                     android:id="@+id/temp_water_edittext"
+                    android:hint="@string/enter_temperature"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
@@ -154,11 +157,12 @@
 
                 <EditText
                     android:id="@+id/date_water_edittext"
+                    android:hint="@string/enter_date"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
                     android:layout_weight="1"
-                    android:inputType="numberDecimal"/>
+                    android:inputType="date"/>
 
             </LinearLayout>
         </LinearLayout>
