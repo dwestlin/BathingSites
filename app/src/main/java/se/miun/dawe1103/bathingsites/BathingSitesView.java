@@ -50,7 +50,7 @@ public class BathingSitesView extends LinearLayout {
 
 
     /**
-     * @param count int the number of Bathing sites.
+     * @param count the number of Bathing sites.
      */
     public void setBathingSites(int count){
         this.bathingSites = count;

@@ -1,13 +1,11 @@
 package se.miun.dawe1103.bathingsites;
 
-
 import android.content.res.Configuration;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v7.widget.Toolbar;
-
 
 
 public class NewBathingSiteActivity extends AppCompatActivity {

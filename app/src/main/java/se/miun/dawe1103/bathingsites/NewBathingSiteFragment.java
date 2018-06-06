@@ -30,7 +30,7 @@ public class NewBathingSiteFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_new_bathing_site, container, false);
@@ -129,7 +129,6 @@ public class NewBathingSiteFragment extends Fragment {
 
 
     private void createSnackbar(String s){
-
         View v = getActivity().findViewById(android.R.id.content);
 
         final Snackbar snackbar = Snackbar.make(v, s, Snackbar.LENGTH_INDEFINITE);
